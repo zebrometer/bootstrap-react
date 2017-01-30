@@ -6,12 +6,12 @@ function createPromiseMiddleware(other) {
 	  }
 
 	  if (typeof action === 'function') {
-	    action = action(store.dispatch, store.getState, other);
+	    action = action(store.dispatch, store.getState, other)
 	  }
 
 	  if (typeof action.then !== 'function') {
-	    if (!action.type) throw new Error('Action has no type!  Check ActionTypes.');
-	    return next(action);
+	    if (!action.type) throw new Error('Action has no type!  Check ActionTypes.')
+	    return next(action)
 	  }
 
 	  return Promise.resolve(action).then(store.dispatch).catch( (error)=> {
