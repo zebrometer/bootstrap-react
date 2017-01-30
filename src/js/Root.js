@@ -16,7 +16,12 @@ import reducers       from './redux/reducer'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
-const initialState = {}
+const initialState = {
+	activePage: 0,
+	templates: [],
+	templatesLoaded: false,
+	canGoNext: false
+}
 const store  = configureStore(reducers, initialState)
 
 render(

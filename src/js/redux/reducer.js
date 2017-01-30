@@ -4,14 +4,8 @@ import {
 	TEMPLATES_LOADED
 } from './actions'
 
-const initialState = {
-	activePage: 0,
-	templates: [],
-	templatesLoaded: false,
-	canGoNext: false
-}
 
-export default function reducer(state = initialState, action) {
+export default function reducer(state, action) {
 	switch(action.type) {
 		case PAGE_ACTIVATED:
 			return { ...state, activePage: action.value }
@@ -22,5 +16,5 @@ export default function reducer(state = initialState, action) {
 					templatesLoaded: true
 			}
 	}
-  return initialState
+  return state
 }
