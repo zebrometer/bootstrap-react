@@ -30,13 +30,6 @@ class App extends React.Component {
 		muiTheme:   React.PropTypes.object.isRequired
 	};
 
-	static style = {
-	  height: 500,
-	  margin: 20,
-	  textAlign: 'center',
-	  display: 'inline-block',
-	};
-
 	constructor(props) {
 		super(props)
 
@@ -64,8 +57,8 @@ class App extends React.Component {
 		return (
 			<div className="main-div">
 
-				<Paper className="paper" style={App.style} zDepth={2}>
-					<div className="stepper-div" style={{width: '100%', maxWidth: 700, margin: 'auto'}}>
+				<Paper className="paper" zDepth={2}>
+					<div className="stepper-div">
 						<Stepper activeStep={activePage}>
 							<Step>
 								<StepLabel>Pick a template</StepLabel>
